@@ -106,3 +106,14 @@ h1{
     font-size: 0.8rem;
     font-weight: bold;
 }
+
+/* Adicione uma regra de mídia para telas com largura menor que 439px */
+@media screen and (max-width: 439px) {
+    .pokemon{
+        
+       
+        width: 100%; /* Define a largura desejada para os cartões em telas menores */
+        margin: 25px; /* Adiciona um espaço mínimo entre os cartões */
+    }
+  }
+
