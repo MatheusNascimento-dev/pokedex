@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+
+    background: linear-gradient(to right, #e5ffb5, #ffacb5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+h1{
+
+    letter-spacing: 5px;
+
+}
+
+.pokeContainer {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.pokemon{
+    
+    background-color: #e5ffb5;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px; /* Defina a largura mínima desejada para os cards */
+}
+
+.img-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    
+}
+
+.img-container img{
+
+    max-width: 90%;
+
+}
+
+.info{
+
+    margin-top: 20px;
+
+}
+
+.number{
+
+    background-color: rgba(0, 0, 0, 0.15) ;
+    padding: 2px 13px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.name{
+
+    margin: 15px 0 7px;
+
+    white-space: nowrap;  /*Esta propriedade controla como o espaço em branco dentro do elemento é tratado. O valor nowrap faz com que o texto não seja quebrado em várias linhas, independentemente do tamanho da janela do navegador. */
+
+    overflow: hidden; /*sso oculta qualquer conteúdo que transborde a caixa do elemento. No contexto do nome do Pokémon, se ele for muito longo para caber no card, o texto excedente será ocultado em vez de se espalhar para fora do card. */
+
+    text-overflow: ellipsis; /*Esta propriedade adiciona reticências (...) ao final do texto quando ele é cortado devido à restrição de tamanho. Isso fornece uma dica visual de que há mais texto não visível. Por exemplo, se o nome do Pokémon for muito longo e for cortado, você verá algo como "Pikachu...", indicando que há mais texto além do que está visível. */
+
+    flex-grow: 1; /* Esta propriedade é usada em combinação com display: flex; no elemento pai (.pokemon) para permitir que o elemento filho (.name) cresça e preencha o espaço vertical disponível. Isso garante que, independentemente do tamanho do nome do Pokémon, o espaço dentro do card seja utilizado de maneira eficaz, evitando que haja espaço vazio não desejado abaixo do nome. */
+}
+
+.type span{
+
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15) ;
+    padding: 2px 13px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
