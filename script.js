@@ -19,6 +19,8 @@ const colors = {
 
 }
 
+
+
 const pokemonTypes = Object.keys(colors)
 
 const fetchPokemons = async () => {
@@ -75,8 +77,17 @@ const PokemonCard = (poke) => {
 
     card.innerHTML = pokemonInnerHTML
 
+ // Adicione um evento de clique ao card para atualizar o background da página
+ card.addEventListener("mouseover", () => {
+    document.body.style.background = `linear-gradient(to right, ${color}, ${color})`;
+});
+
     pokeContainer.appendChild(card)
+
 
 }
 
+
+
 fetchPokemons()
+
