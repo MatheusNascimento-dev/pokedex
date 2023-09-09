@@ -89,7 +89,7 @@ h1{
 
     white-space: nowrap;  /*Esta propriedade controla como o espaço em branco dentro do elemento é tratado. O valor nowrap faz com que o texto não seja quebrado em várias linhas, independentemente do tamanho da janela do navegador. */
 
-    overflow: hidden; /*sso oculta qualquer conteúdo que transborde a caixa do elemento. No contexto do nome do Pokémon, se ele for muito longo para caber no card, o texto excedente será ocultado em vez de se espalhar para fora do card. */
+    overflow: hidden; /*isso oculta qualquer conteúdo que transborde a caixa do elemento. No contexto do nome do Pokémon, se ele for muito longo para caber no card, o texto excedente será ocultado em vez de se espalhar para fora do card. */
 
     text-overflow: ellipsis; /*Esta propriedade adiciona reticências (...) ao final do texto quando ele é cortado devido à restrição de tamanho. Isso fornece uma dica visual de que há mais texto não visível. Por exemplo, se o nome do Pokémon for muito longo e for cortado, você verá algo como "Pikachu...", indicando que há mais texto além do que está visível. */
 
@@ -112,4 +112,20 @@ h1{
     transform: scale(1.2);
     transition: all 0.5s;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 439px) {
+
+    .pokeContainer{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+
 }
